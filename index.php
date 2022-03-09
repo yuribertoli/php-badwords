@@ -9,8 +9,11 @@ $lengthphrase = ' La frase ha: ' . strlen($phrase) . ' ' . "caratteri";
 // creo un parametro GET definito in una variabile
 $parolaccia = $_GET['censura'];
 
+/* definisco cosa scrivere al posto della parola da censurare */
+$parola_censurata = "***";
+
 /* rimpiazzo il valore indicato dall'utente con degli asterischi dentro la frase, poi salvo tutto dentro una variabile */
-$censored_phrase = "La frase censurata è: " . str_replace($parolaccia, "***", $phrase);
+$censored_phrase = "La frase censurata è: " . str_replace($parolaccia, $parola_censurata, $phrase);
 
 ?>
 
