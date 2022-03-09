@@ -13,7 +13,8 @@ $parolaccia = $_GET['censura'];
 $parola_censurata = "***";
 
 /* rimpiazzo il valore indicato dall'utente con degli asterischi dentro la frase, poi salvo tutto dentro una variabile */
-$censored_phrase = "La frase censurata è: " . str_replace($parolaccia, $parola_censurata, $phrase);
+# uso str_ireplace con la "i" per non distinguere maiuscole e minuscole
+$censored_phrase = "La frase censurata è: " . str_ireplace($parolaccia, $parola_censurata, $phrase);
 
 ?>
 
